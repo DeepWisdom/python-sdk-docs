@@ -1,0 +1,9 @@
+site_name: DeepWisdom Python Client
+
+theme: material
+
+plugins:
+  - search
+  - mkdocstrings
+  - autorefs
+  - include-markdown
