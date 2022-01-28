@@ -573,7 +573,6 @@ class Project(APIObject):
             PredictDataset: 离线预测数据集
         """
         data = {
-            "project_id": self.project_id
         }
 
         file_type = os.path.splitext(filename)[-1][1:]
@@ -589,7 +588,7 @@ class Project(APIObject):
             response = self._client._upload(API_URL.DATASET_PREDICT_UPLOAD, data, files)
 
         dataset = dict(PredictDataset._safe_data(response["data"]))
-        return PredictDataset(project_id=self.project_id, **dataset)
+        return PredictDataset(**dataset)
 
     def predict_dataset_list(self):
         """

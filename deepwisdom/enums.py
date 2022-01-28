@@ -40,6 +40,26 @@ SVR_STATUS = enum(
     DELETED=9,
 )
 
+# 云类型
+CLOUD_TYPE = enum(
+    LOCAL=0,
+    AMAZON=1,
+    ALI=2,
+    TENCENT=3,
+    HUAWEI=4
+)
+
+# 数据来源
+DATA_SOURCE = enum(
+    LOCAL=0,
+    MYSQL=1,
+    ORACLE=2,
+    MARIADB=3,
+    HDFS=4,
+    HIVE=5
+)
+
+# 模态类型
 MODAL_TYPE = enum(
     CSV=0,
     VIDEO=1,
